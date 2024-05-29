@@ -1,6 +1,6 @@
 # Overview 
 Main part of this project is an air-gapped cold wallet for TON blockchain. This software allows
-to separate process of signing transaction from sending them to the network
+to separate process of signing transactions from sending them to the network
 
 Software consists of 2 parts:
   - [offline client](https://github.com/ton-offline-storage/ton-offline-client), web page designed for usage on an offline computer(browser is required). Creates and signs transactions
