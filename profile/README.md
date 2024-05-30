@@ -127,6 +127,33 @@ The last question is, how many hackers even know about TON Air Gap Wallet, and h
 
 That is all an explanation, why air gapped wallet is considered significantly more secure, than classic non-custodial wallets
 
+### Comparsion with hardware wallets
+
+There are commercial hardware wallets, like Ledger for example. They are also cold wallets, which sign transactions on a separate device.
+Are they better than Ton Air Gap Wallet, are they safer?
+
+There is one clear advantage of hardware wallets, they are easier to use than Ton Air Gap Wallet.
+This is the only advantage known to us, here is the list of disadvantages:
+
+- Price of Ledger starts from 70 USD. For Air Gap wallet you only need 2 USB sticks - you probably already have them, if not, that would cost less than 10 USD.
+
+This could actually be the end of the list, because at least 7 times price difference puts wallets in different categories.
+Nonetheless, more thoughts:
+
+- Both wallets are theoretically hackable, but hacking any hardware wallet is the ultimate dream of every hacker in the world - how many of them even know about
+Ton Air Gap Wallet?
+- Can you be sure, that the hardware wallet that has been delivered to you, is the real Ledger, and it has original firmware? Hardware wallet is a very desirable thing to
+  design identical, but malicious analogs. In comparsion, what is the chance that random USB stick you have bought, has a backdoor, specifically targetting TON Air Gap Wallet?
+- It is not a big problem, but worth mentioning - Ledger's code is not completely open source. Ton Air Gap Wallet is absolutely open source, and, speaking about the most
+sensetive part - offline client - you only have to inspect 400 lines of JavaScript, which is relatively easy.
+- Ledger is designed, on a hardware level, in such a way, that recovery phrase can never ever thereoretically leave the device, right?
+  
+  **WRONG.** Ledger has a recovery feature, where your recovery phrase is split into 3 parts, it leaves the device and is sent over the internet.
+  Recovery phrase **CAN** leave ledger. Will it, and will a vulnerability be found? We don't know
+
+  Will Ledger company, under goverment pressure, or for another reasons, make this feature mandatory? We don't know
+
+All this make us think that Ton Air Gap Wallet is more secure than hardware wallets, and we personally would prefer it to established hardware wallets.
 
 
 
