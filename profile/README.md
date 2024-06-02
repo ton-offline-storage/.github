@@ -83,7 +83,11 @@ Why is an air gapped wallet considered secure, and how secure it is?
 Here we only discuss non-custodial wallets, where you own your mnemonic phrase.
 Custodial wallets are a different category, they don't have fundamental differences from traditional online banking,
 and their concept contradicts the very basic idea of any cryptocurrency since Bitcoin - decentralization.
-And one can't say custodial wallets are ultimately secure.
+And one can't say custodial wallets are ultimately secure. But can you face troubles when using popular and trusted
+custodial storage? Turns out you can:
+
+ - Something like [this](https://en.wikipedia.org/wiki/Bankruptcy_of_FTX) can happen to anyone
+ - Something like [this](https://www.binance.com/en/support/announcement/changes-of-services-to-users-in-russia-4887e569afdf4b1e89e024371d3a49b9) can happen if you are unlucky with your citizenship
 
 In a non-custodial wallet, we need to understand how difficult it is  to steal your mnemonic phrase.
 This depends on how a mnemonic phrase is created, stored, and used to sign transactions.
@@ -123,6 +127,7 @@ Now we have a blueprint of the only realistic way to steal the secret phrase. Le
 - The copy on your android device exactly targets online client, and has to intervene with it's work, intercept the secret from scanned QR code and send it through the internet
 
 This is incomparable to the level of sophistication needed to steal a secret from a classic non-custodial wallet on an online computer - a simple keylogger or spy malware would work.
+If a hacker managed to go through all this, imagine how easy is it for him to develop a malware targeting any classic hot wallet.
 The last question is, how many hackers even know about TON Air Gap Wallet, and how many of them will prefer to hack it, instead of hacking classic widely adopted wallets, which run on online devices?
 
 That is all an explanation, why air gapped wallet is considered significantly more secure, than classic non-custodial wallets
@@ -135,25 +140,40 @@ Are they better than Ton Air Gap Wallet, are they safer?
 There is one clear advantage of hardware wallets, they are easier to use than Ton Air Gap Wallet.
 This is the only advantage known to us, here is the list of disadvantages:
 
-- Price of Ledger starts from 70 USD. For Air Gap wallet you only need 2 USB sticks - you probably already have them, if not, that would cost less than 10 USD.
+- Price of Ledger starts from 70 USD. For the Air Gap wallet you only need 2 USB sticks - you probably already have them, if not, that would cost less than 10 USD.
 
 This could actually be the end of the list, because at least 7 times price difference puts wallets in different categories.
 Nonetheless, more thoughts:
 
 - Both wallets are theoretically hackable, but hacking any hardware wallet is the ultimate dream of every hacker in the world - how many of them even know about
 Ton Air Gap Wallet?
-- Can you be sure, that the hardware wallet that has been delivered to you, is the real Ledger, and it has original firmware? Hardware wallet is a very desirable thing to
-  design identical, but malicious analogs. In comparsion, what is the chance that random USB stick you have bought, has a backdoor, specifically targetting TON Air Gap Wallet?
+- Can you be sure, that the hardware wallet that has been delivered to you, is the real device from the manufacturer, and it has original firmware? Hardware wallet is a very desirable thing to
+  design identical, but malicious analogs. Obviously, you **must** order hardware wallets from the official manufacturer website. Chances of getting fake device vastly increase, when ordering from marketplace, or
+  buying in a third-party store. Even if you bought from the official web-site, can you be sure that nothing happens during delivery?
+  In addition if you were unlucky to be born in some of [this](https://support.ledger.com/hc/en-us/articles/360006562214-Unavailable-Countries?support=true) countries, you **cannot** buy a popular hardware wallet from the official website at all.
+  Most of these countries also do not appear in the list of available ones for [trezor](https://trezor.io/) as well.
+  
+  In comparison, what is the chance that the random USB stick you have bought has a backdoor, specifically targeting TON Air Gap Wallet? What this backdoor should even be?
+  
 - It is not a big problem, but worth mentioning - Ledger's code is not completely open source. Ton Air Gap Wallet is absolutely open source, and, speaking about the most
-sensetive part - offline client - you only have to inspect 400 lines of JavaScript, which is relatively easy.
-- Ledger is designed, on a hardware level, in such a way, that recovery phrase can never ever thereoretically leave the device, right?
+sensitive part - offline client - you only have to inspect 400 lines of JavaScript, which is *relatively* easy.
+- Ledger is designed, on a hardware level, in such a way, that recovery phrase can never ever theoretically leave the device, right?
   
   **WRONG.** Ledger has a recovery feature, where your recovery phrase is split into 3 parts, it leaves the device and is sent over the internet.
-  Recovery phrase **CAN** leave ledger. Will it, and will a vulnerability be found? We don't know
+  Recovery phrase **CAN** leave the ledger. Will it, and will a vulnerability be found? We don't know
 
-  Will Ledger company, under goverment pressure, or for another reasons, make this feature mandatory? We don't know
+  Will Ledger company, under government pressure, or for other reasons, make this feature mandatory? We don't know
+- There were no security incidents with hardware wallets, which were the fault of the wallet provider, right? [Wrong](https://www.ledger.com/blog/security-incident-report)
+- Hardware wallets are not as anonymous as you could expect. You **must** order the device from official website, and you have to provide the company with your email address,
+  and address for shipping. Many people also provided the companies with additional personal information. And this information is **not** [safe](https://www.ledger.com/message-ledgers-ceo-data-leak)
+  
+  But funds stored on hardware wallets were not affected right? Yes. However, as soon as client's personal information was available to scammers, ledger owners were attacked
+  with all sorts of phishing scams - email, phone numbers, and paper letters to a home address, everything was used. Would you be among those who fell for a phishing? We don't know.
+  Nonetheless, there are different people in the world, and what some of them would do, knowing you store large amounts of crypto, and knowing your home address?
+  
+  In contrary, *which data* and *from where* is going to leak, if you are using TON Air Gap Wallet?
 
-All this make us think that Ton Air Gap Wallet is more secure than hardware wallets, and we personally would prefer it to established hardware wallets.
+It is an open question which cold wallet to use, but we personally prefer Ton Air Gap Wallet to established hardware wallets.
 
 
 
