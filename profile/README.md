@@ -135,6 +135,7 @@ If a hacker managed to go through all this, imagine how easy is it for him to de
 
 Moreover, if there was no *very* specialized malware on your primary system, when you installed Tails and copied offline client, the offline system is safe forever, because no
 information enters it, except for keyboard input. That's not true for classic wallets - you can catch malware anytime, and your secret, stored or used in the primary system is endangered.
+The longer you hold the crypto, the bigger is the chance.
 The last question is, how many hackers even know about TON Air Gap Wallet, and how many of them will prefer to hack it, instead of hacking classic widely adopted wallets, which run on online devices?
 
 That is all an explanation, why air gapped wallet is considered significantly more secure, than classic non-custodial wallets
