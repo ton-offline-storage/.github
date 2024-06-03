@@ -64,7 +64,10 @@ You can do whatever you want to obtain an offline computer, we will discuss the 
   and verify it in online client
 - You can store your mnemonic in persistent storage, but it is safer to store it on several physical mediums, and type it in an offline client every time.
   It insures you from losing USB drive with mnemonic, and makes task harder for potential *very* sophisticated malware
-  
+- After you transfered offline client to offline system, calculate SHA256 hash of the zip file you transfered. In linux and Tails,
+  run `sha256sum <filename>.zip`. Compare hash with hash of your [release](https://github.com/ton-offline-storage/ton-offline-client/releases), they must match.
+  This way, it's not enough for malware to simply forge the offline client in your primary system.
+
 You may notice, that *very* sophisticated malware still may establish offline communication between two systems with common hardware. You can take additional countermeasures every time you switch between systems:
 
 - Physically remove all persistent drives
@@ -123,11 +126,15 @@ Now we have a blueprint of the only realistic way to steal the secret phrase. Le
 
 - It has to be designed with a specific purpose to wait, until you decide to use exactly the TON Air Gap Wallet with Tails OS
 - When it happens, it has to track down copying of offline client to a USB drive, and replace offline client with exact copy, with altered QR code creation
+- But you calculate SHA256 of the offline client in Tails, so malware also has to forge the installed Tails system itself, making it show wrong SHA256 result for the forged offline client.
 - Malware has to invent genius way to spread itself to your android device
 - The copy on your android device exactly targets online client, and has to intervene with it's work, intercept the secret from scanned QR code and send it through the internet
 
 This is incomparable to the level of sophistication needed to steal a secret from a classic non-custodial wallet on an online computer - a simple keylogger or spy malware would work.
 If a hacker managed to go through all this, imagine how easy is it for him to develop a malware targeting any classic hot wallet.
+
+Moreover, if there was no *very* specialized malware on your primary system, when you installed Tails and copied offline client, the offline system is safe forever, because no
+information enters it, except for keyboard input. That's not true for classic wallets - you can catch malware anytime, and your secret, stored or used in the primary system is endangered.
 The last question is, how many hackers even know about TON Air Gap Wallet, and how many of them will prefer to hack it, instead of hacking classic widely adopted wallets, which run on online devices?
 
 That is all an explanation, why air gapped wallet is considered significantly more secure, than classic non-custodial wallets
