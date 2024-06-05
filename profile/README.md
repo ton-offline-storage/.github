@@ -4,6 +4,8 @@ to separate process of signing transactions from sending them to the network, an
 
 This allows to reach probably the highest possible level of security, comparable (or even better?) to hardware wallets, like Ledger, etc.
 
+If classic hot wallets are secure enough, why more than 8 million people bought a hardware wallet?
+
 Software consists of 2 parts:
   - [offline client](https://github.com/ton-offline-storage/ton-offline-client), web page designed for usage on an offline computer(browser is required). Creates and signs transactions
   - [online client](https://github.com/mcnckc/ton-airgap-client), android application, broadcasts transactions, shows balances and history
@@ -57,6 +59,18 @@ You can do whatever you want to obtain an offline computer, we will discuss the 
 8. Connect USB with offline client, transfer offline client to persistent storage
 9. Thats it - when you need offline client, boot with Tails and open offline client from persistent storage
 
+## Android client alternative
+If you don't have an android device, or don't want to use online client, you can transfer the `.boc` file of transaction to online PC, and
+send from there with [liteclient binary](https://docs.ton.org/develop/smart-contracts/environment/installation).
+
+It is less safe, because you need to succesively connect USB to both online and offline systems, which is a potential line of communication, but it works.
+
+Download liteservers [config](https://ton.org/global-config.json), and run following command in terminal:
+
+**Windows:** `lite-client -C global-config.json -c "sendfile transaction.boc"`
+
+**Linux:** `lite-client -C global-config.json -c 'sendfile transaction.boc'`
+
 ## Additional security measures
 
 - Immediately disconnect USB with offline client after you transferred it to persistent storage, before any sensitive data appeared in the system
@@ -78,6 +92,9 @@ You may notice, that *very* sophisticated malware still may establish offline co
 This leaves no room for communication between two systems, there is nowhere else to store data.
 It may be baffling to do this steps on a laptop, so it worth noting that even without them communication requires *both*
 systems to be infected with *very* sophisticated malware, which is unlikely.
+
+Moreover, regardless the taken measures, under assumption that there were no *very* specialized malware on your primary system when you have prepared tails and offline client,
+offline system is safe forever, because after that, whenever primary system is active, offline USB is not connected to other hardware, meaning malware cannot get from primary to offline system.
 
 # Security discussion
 
@@ -182,6 +199,19 @@ sensitive part - offline client - you only have to inspect 400 lines of JavaScri
   In contrary, *which data* and *from where* is going to leak, if you are using TON Air Gap Wallet?
 
 It is an open question which cold wallet to use, but we personally prefer Ton Air Gap Wallet to established hardware wallets.
+
+### Trusting TON Air Gap Wallet
+
+But maybe the contents of this project's repositories are malicious in the first place? It could be, though, it is *comparably* easy to ensure that's not the case.
+Assume the offline client is not malicious, and there is no third party malware. As we discussed earlier, your secret firstly has to leave offline system - it cannot leave through internet,
+it cannot go to primary system, because there are no malware in offline system, and it cannot leave through QR code, because there are no malware in offline system.
+  
+Therefore, it is enough to trust the offline client. For that it is enough to inspect 400 lines of JavaScript, and 300 lines of HTML, or trust someone who inspected it.
+Speaking about open source projects, that's a relatively small number.
+
+  
+
+
 
 
 
