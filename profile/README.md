@@ -72,7 +72,7 @@ Download liteservers [config](https://ton.org/global-config.json), and run follo
 **Linux:** `lite-client -C global-config.json -c 'sendfile transaction.boc'`
 
 ## Additional security measures
-
+- When starting tails, add addtional option, which disables all networking
 - Immediately disconnect USB with offline client after you transferred it to persistent storage, before any sensitive data appeared in the system
 - It is better to never connect any USB or other drives further to Tails OS to maintain isolation. You can manually retype recipient address to offline client,
   and verify it in online client
