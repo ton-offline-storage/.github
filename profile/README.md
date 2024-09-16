@@ -157,7 +157,7 @@ The last question is, how many hackers even know about TON Air Gap Wallet, and h
 
 That is all an explanation, why air gapped wallet is considered significantly more secure, than classic non-custodial wallets
 
-### Comparsion with hardware wallets
+### Comparison with hardware wallets
 
 There are commercial hardware wallets, like Ledger for example. They are also cold wallets, which sign transactions on a separate device.
 Are they better than Ton Air Gap Wallet, are they safer?
