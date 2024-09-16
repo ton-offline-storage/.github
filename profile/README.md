@@ -17,7 +17,7 @@ address and use it further. It is safer, but not mandatory, to generate address 
 
 1. Download [offline client](https://github.com/ton-offline-storage/ton-offline-client), transfer it to an offline computer
 using USB stick or another way not involving internet
-2. Install [online client](https://github.com/mcnckc/ton-airgap-client) on your android device
+2. Install [online client](https://github.com/mcnckc/ton-airgap-client) on your android device. Read [this](https://github.com/ton-offline-storage) if you don't have an android device
 3. Use an offline client to create a new address, scan transaction with an online client, follow instructions. Use your new address to receive funds
 4. When you want to send funds, go to an offline client, follow instructions. Scan transaction with online client, follow instructions
 5. Use online client to watch your addresses' balances and transaction history
