@@ -165,7 +165,7 @@ Are they better than Ton Air Gap Wallet, are they safer?
 There is one clear advantage of hardware wallets, they are easier to use than Ton Air Gap Wallet.
 This is the only advantage known to us, here is the list of disadvantages:
 
-- Price of Ledger starts from 70 USD. For the Air Gap wallet you only need 2 USB sticks - you probably already have them, if not, that would cost less than 10 USD.
+- Price of Ledger starts from 70 USD. For the Air Gap wallet you only need 2 USB sticks, and you don't need the second one after installation, and may use it for other purposes. You probably already have them, if not, that would cost less than 10 USD.
 
 This could actually be the end of the list, because at least 7 times price difference puts wallets in different categories.
 Nonetheless, more thoughts:
